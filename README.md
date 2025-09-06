@@ -82,3 +82,16 @@ Ejecución
 - Boxplots comparativos de precios.
 - Heatmap de correlaciones.
 - Mapa interactivo de alojamientos en NYC.
+
+### Insights preliminares
+
+- El tipo de habitación y la ubicación son factores clave en el precio.
+- La mayoría de los alojamientos cuesta menos de $500 USD, aunque existen outliers extremos.
+- Los mínimos de noches suelen estar entre 1 y 5, pero hay valores irreales que requieren limpieza.
+- Los barrios más concentrados son Manhattan y Brooklyn, con precios más altos en zonas céntricas.
+- Las correlaciones entre variables numéricas son bajas, lo que muestra que factores categóricos son más explicativos.
+
+### Licencia
+
+Este proyecto se distribuye bajo la licencia MIT.
+Puedes reutilizar y adaptar el material con fines educativos o personales, siempre nombrando al autor original del repositorio.
