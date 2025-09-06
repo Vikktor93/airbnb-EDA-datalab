@@ -63,7 +63,7 @@ Ejecución
 
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/<tu-usuario>/EDA_Airbnb.git
+    git clone https://github.com/Vikktor93/airbnb-EDA-datalab
     cd EDA_Airbnb
     ```
 
@@ -93,5 +93,5 @@ Ejecución
 
 ### Licencia
 
-Este proyecto se distribuye bajo la licencia MIT.
+Este proyecto se distribuye bajo la [licencia MIT](https://github.com/Vikktor93/airbnb-EDA-datalab/blob/main/LICENSE).
 Puedes reutilizar y adaptar el material con fines educativos o personales, siempre nombrando al autor original del repositorio.
