@@ -1,7 +1,6 @@
 # EDA Airbnb NYC 2019 - Mini Proyecto DataLab
 
-Este proyecto corresponde a un **Análisis Exploratorio de Datos (EDA)** desarrollado en Python como parte del curso **Python para Data Science de DataLab**.  
-Este trabajo utiliza el dataset **Airbnb NYC 2019** (disponible en [Kaggle](https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data)).
+Este proyecto corresponde a un **Análisis Exploratorio de Datos (EDA)** desarrollado en Python como parte del curso **Python para Data Science de DataLab**.  Este trabajo utiliza el dataset **Airbnb NYC 2019** (disponible en [Kaggle](https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data)).
 
 ### Objetivos de Aprendizaje
 
@@ -16,22 +15,31 @@ Este trabajo utiliza el dataset **Airbnb NYC 2019** (disponible en [Kaggle](http
 ### Estructura del proyecto
 
 ```bash
-EDA_Airbnb/
+Mini-Proyecto/
 │
-├── data/                # Dataset original
-├── notebooks/           # Jupyter Notebooks del análisis
-│   └── EDA_Airbnb.ipynb
-├── output/              # Gráficos generados 
-│   ├── distribucion_room_type.png
-│   ├── precio_promedio_room_type.png
-│   ├── top10_barrios.png
-│   ├── distribucion_precios.png
+├── data/                      # Datasets originales y procesados | Original and processed datasets
+│   ├── AB_NYC_2019.csv
+│   ├── airbnb_cap.csv
+│   ├── airbnb_clean.csv
+│   ├── archive.zip
+│   └── New_York_City_.png
+│
+├── output/                    # Gráficos generados | Generated plots
+│   ├── boxplot_outliers.png
 │   ├── boxplot_precios.png
 │   ├── distribucion_minimum_nights.png
-│   ├── mapa_airbnb.png
+│   ├── distribucion_precios.png
+│   ├── distribucion_room_type.png
 │   ├── heatmap_corr.png
-│   └── boxplot_outliers.png
-└── README.md
+│   ├── mapa_airbnb.png
+│   ├── precio_promedio_room_type.png
+│   └── top10_barrios.png
+│
+├── 000_instrucciones.ipynb    # Notebook con instrucciones | Instructions notebook
+├── 001_EDA.ipynb              # Notebook principal del EDA | Main EDA notebook
+│
+├── LICENSE                    # Licencia | License
+└── README.md                  # Documentación | Documentation
 ```
 ### Instalación y Requisitos
 
