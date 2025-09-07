@@ -8,7 +8,7 @@
    <img src="https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter" alt="Jupyter Notebooks">
   <img src="https://img.shields.io/badge/App-Streamlit-red?logo=streamlit" alt="Streamlit">
   <img src="https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-blueviolet" alt="EDA Project">
-  <a href="https://tu-app.streamlit.app/">
+  <a href="https://airbnb-eda-datalab-2025.streamlit.app/">
     <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit">
   </a>
 </p>
