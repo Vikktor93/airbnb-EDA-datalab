@@ -5,7 +5,7 @@
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="MIT License">
   </a>
-   <img src="https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter" alt="Jupyter Notebooks">
+  <img src="https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter" alt="Jupyter Notebooks">
   <img src="https://img.shields.io/badge/App-Streamlit-red?logo=streamlit" alt="Streamlit">
   <img src="https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-blueviolet" alt="EDA Project">
   <a href="https://airbnb-eda-datalab-2025.streamlit.app/">
@@ -16,6 +16,12 @@
 # EDA Airbnb NYC 2019 - Mini Proyecto DataLab
 
 Este proyecto corresponde a un **Análisis Exploratorio de Datos (EDA)** desarrollado en Python como parte del curso **Python para Data Science de DataLab**.  Este trabajo utiliza el dataset **Airbnb NYC 2019** (disponible en [Kaggle](https://www.kaggle.com/dgomonov/new-york-city-airbnb-open-data)).
+
+## 🚀 Demo en línea | Live Demo
+
+Puedes visualizar el Dashboard directamente aquí:  
+👉 [**Abrir en Streamlit Cloud**](https://airbnb-eda-datalab-2025.streamlit.app/)
+
 
 ### Objetivos de Aprendizaje
 
