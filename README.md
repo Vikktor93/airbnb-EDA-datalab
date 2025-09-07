@@ -50,6 +50,7 @@ Las principales librerías utilizadas son:
 - `matplotlib == 3.10.1`
 - `seaborn == 0.13.2`
 - `plotly == 6.0.1`
+- `kaleido == 0.2.1`
 - `geopandas == 1.0.1` (opcional, para análisis geoespacial más avanzado)
 
 
