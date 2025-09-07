@@ -8,7 +8,7 @@
   <img src="https://img.shields.io/badge/Notebook-Jupyter-orange?logo=jupyter" alt="Jupyter Notebooks">
   <img src="https://img.shields.io/badge/App-Streamlit-red?logo=streamlit" alt="Streamlit">
   <img src="https://img.shields.io/badge/EDA-Exploratory%20Data%20Analysis-blueviolet" alt="EDA Project">
-  <a href="https://airbnb-eda-datalab-2025.streamlit.app/">
+  <a href="https://airbnb-2019-eda.streamlit.app/">
     <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit">
   </a>
 </p>
@@ -20,7 +20,7 @@ Este proyecto corresponde a un **Análisis Exploratorio de Datos (EDA)** desarro
 ## 🚀 Demo en línea | Live Demo
 
 Puedes visualizar el Dashboard directamente aquí:  
-👉 [**Abrir en Streamlit Cloud**](https://airbnb-eda-datalab-2025.streamlit.app/)
+👉 [**Abrir en Streamlit Cloud**](https://airbnb-2019-eda.streamlit.app/)
 
 
 ### Objetivos de Aprendizaje
