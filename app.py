@@ -23,12 +23,13 @@ def build_df_clean(df: pd.DataFrame) -> pd.DataFrame:
         df_clean["name"] = df_clean["name"].fillna("Desconocido")
     if "host_name" in df_clean.columns:
         df_clean["host_name"] = df_clean["host_name"].fillna("Desconocido")
-    # Eliminar columnas no usadas con muchos nulos
+    # Se eliminan las columnas no usadas con muchos nulos
     for col in ["last_review", "reviews_per_month"]:
         if col in df_clean.columns:
             df_clean.drop(columns=[col], inplace=True)
     return df_clean
 
+# IQR
 def iqr_cap(s: pd.Series, k: float = 1.5) -> pd.Series:
     q1, q3 = s.quantile(0.25), s.quantile(0.75)
     iqr = q3 - q1
@@ -36,24 +37,24 @@ def iqr_cap(s: pd.Series, k: float = 1.5) -> pd.Series:
     return s.clip(low, high)
 
 # Sidebar
-st.sidebar.title("Configuración de datos")
+st.sidebar.title("Configuración de Datos")
 
 DEFAULTS = [
     "data/airbnb_clean.csv",
     "data/AB_NYC_2019.csv",
 ]
 
-# Selector de origen
+# Selector de Origen
 data_source = st.sidebar.radio(
     "Origen de datos",
-    ["Archivo del repositorio", "Subir CSV"],
+    ["Archivo del Repositorio", "Subir CSV"],
     index=0
 )
 
 df_clean = None
 selected_path = None
 
-if data_source == "Archivo del repositorio":
+if data_source == "Archivo del Repositorio":
     # Intentamos rutas comunes del repositorio
     existing = [p for p in DEFAULTS if os.path.exists(p)]
     if existing:
@@ -89,7 +90,7 @@ sel_boroughs = st.sidebar.multiselect("Borough(s)", options=boroughs, default=bo
 
 min_price = float(df_clean["price"].min()) if "price" in df_clean.columns else 0.0
 max_price = float(df_clean["price"].clip(upper=5000).max()) if "price" in df_clean.columns else 1000.0
-price_range = st.sidebar.slider("Rango de precio ($)", min_value=0.0, max_value=max_price,
+price_range = st.sidebar.slider("Rango de Precio ($)", min_value=0.0, max_value=max_price,
                                 value=(0.0, min(500.0, max_price)), step=10.0)
 
 # Aplicar filtros
@@ -101,7 +102,7 @@ if sel_boroughs and "neighbourhood_group" in df_view.columns:
 if "price" in df_view.columns:
     df_view = df_view[(df_view["price"] >= price_range[0]) & (df_view["price"] <= price_range[1])]
 
-st.sidebar.info(f"Filas visibles: {len(df_view):,}")
+st.sidebar.info(f"Filas Visibles: {len(df_view):,}")
 
 # Header
 st.title("Airbnb NYC - EDA Dashboard")
@@ -110,7 +111,7 @@ if selected_path:
 elif data_source == "Subir CSV":
     st.caption("Fuente: archivo subido por el usuario")
 else:
-    st.caption("Fuente: dataset")
+    st.caption("Fuente: Dataset")
 
 # KPIs
 col1, col2, col3, col4 = st.columns(4)
@@ -138,7 +139,7 @@ tab1, tab2, tab3, tab4, tab5 = st.tabs([
 ])
 
 with tab1:
-    st.subheader("Distribución de precios")
+    st.subheader("Distribución de Precios")
     if "price" in df_view.columns:
         fig = px.histogram(df_view, x="price", nbins=50, opacity=0.9)
         fig.update_layout(xaxis_title="Precio", yaxis_title="Frecuencia")
@@ -159,7 +160,7 @@ with tab2:
         st.info("Faltan columnas para este gráfico")
 
 with tab3:
-    st.subheader("Top 10 barrios por cantidad de alojamientos")
+    st.subheader("Top 10 Barrios por Cantidad de Alojamientos")
     if "neighbourhood" in df_view.columns:
         top10 = df_view["neighbourhood"].value_counts().head(10).sort_values(ascending=True)
         fig3 = px.bar(top10, orientation="h", labels={"value": "conteo", "index": "neighbourhood"})
@@ -168,7 +169,7 @@ with tab3:
         st.info("No existe la columna 'neighbourhood'")
 
 with tab4:
-    st.subheader("Matriz de correlación (numéricas)")
+    st.subheader("Matriz de Correlación (numéricas)")
     num_cols = [c for c in ["price", "minimum_nights", "number_of_reviews",
                             "calculated_host_listings_count", "availability_365"]
                 if c in df_view.columns]
@@ -181,7 +182,7 @@ with tab4:
         st.info("No hay suficientes columnas numéricas para correlación")
 
 with tab5:
-    st.subheader("Mapa de alojamientos (muestra)")
+    st.subheader("Mapa de Alojamientos (muestra)")
     needed = {"latitude", "longitude"}.issubset(df_view.columns)
     if needed:
         sample_geo = df_view.sample(min(4000, len(df_view)), random_state=42)
