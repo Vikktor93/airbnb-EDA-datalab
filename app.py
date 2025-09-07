@@ -211,4 +211,4 @@ with tab5:
         st.info("No existen columnas 'latitude' y 'longitude' para el mapa")
 
 st.divider()
-st.caption("Datos: Airbnb NYC 2019 (o dataset cargado por el usuario). Dashboard con fines Educativos")
+st.caption("Datos: Airbnb NYC 2019. Dashboard con fines Educativos. Autor: Victor Saldivia Vera")
