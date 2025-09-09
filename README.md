@@ -11,6 +11,7 @@
   <a href="https://airbnb-2019-eda.streamlit.app/">
     <img src="https://static.streamlit.io/badges/streamlit_badge_black_white.svg" alt="Open in Streamlit">
   </a>
+  <img src="./assets/EDA-Dashboard.gif"/>
 </p>
 
 # EDA Airbnb NYC 2019 - Mini Proyecto DataLab
